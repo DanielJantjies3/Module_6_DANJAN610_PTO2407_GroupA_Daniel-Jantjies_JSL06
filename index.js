@@ -9,7 +9,7 @@ const menu = {
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
 
-    const menuContainer = document.getAnimations('menu');
+    const menuContainer = document.getElementById('menu');
     if (!menuContainer) {
         console.error('Menu Container Not Found');
         return;
@@ -25,7 +25,7 @@ function displayMenuItems(menu) {
 
     // Create an element to represent a list of items
 
-    const itemsList = document.createElement('ul')
+    const itemsList = document.createElement('ul');
 
         // Loop through the items in the category and create list items
 
@@ -48,7 +48,7 @@ function displayMenuItems(menu) {
 function addToOrder(itemName) {
    
    const orderItems = document.getElementById('order-items');  // Get the order items list and the order total element from the HTML
-   const orderTotalElement = document.getElementById('order-total');  // Create a list item for the order
+   const orderTotalElement = document.getElementById('order-total');  
    const orderItem = document.createElement('li');   // Create a list item for the order
    orderItem.textContent = itemName; // Set the text content of the list item to the item name
     
@@ -65,8 +65,9 @@ function addToOrder(itemName) {
 
 // Function to initialize the menu system
 function initMenuSystem(menu) {
-    // Call the function to display menu items
+    displayMenuItems(menu);  // Call the function to display menu items
 }
 
 // Start the menu system by calling the init function
 initMenuSystem(menu);
+
