@@ -9,6 +9,12 @@ const menu = {
 function displayMenuItems(menu) {
     // Get the menu container element from the HTML
 
+    const menuContainer = document.getAnimations('menu');
+    if (!menuContainer) {
+        console.error('Menu Container Not Found');
+        return;
+    }
+
     // Loop through each category and its items in the menu object
 
         // Create an element to represent the category
